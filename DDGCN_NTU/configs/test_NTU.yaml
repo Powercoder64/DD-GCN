@@ -1,0 +1,38 @@
+argparse_cfg:
+  gpus:
+    bind_to: processor_cfg.gpus
+    help: number of gpus
+  batch_size:
+    bind_to: processor_cfg.batch_size
+  checkpoint:
+    bind_to: processor_cfg.checkpoint
+    help: the checkpoint file to load from
+    default: DDGCN://ddgcn/ntu-xview
+
+processor_cfg:
+  name: ".recognition.test"
+  checkpoint: ddgcn/ntu-xview
+
+  # model setting
+  model_cfg:
+    name: ".DDGCN"
+    in_channels: 3
+    num_class: 60
+    dropout: 0.5
+    edge_importance_weighting: True
+    graph_cfg:
+      layout: "ntu-rgb+d"
+      strategy: "dynamic"
+
+  # dataset setting
+  dataset_cfg:
+    name: ".datasets.SkeletonReader"
+    data_path: 
+    # debug: true
+
+  # dataloader setting
+  batch_size: 4
+  gpus: 1
+
+
+
