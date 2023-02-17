@@ -27,8 +27,8 @@ OpenCV:
    --wi    video frames width for pose data normalization
    --he    video frames height for pose data normalization
 
-  - Example of command-line script to run the OpenPose action recognition:    
-    Python PATH_TO_APP_ROOT/run_DDGCN_Open.py --rec --pose=PATH_TO_OPENPOSE_OUTPUT --wi=FRAMES_WIDTH --he=FRAMES_HEIGHT
+  - Example of command-line script to run the OpenPose action recognition:     
+    ```Python PATH_TO_APP_ROOT/run_DDGCN_Open.py --rec --pose=PATH_TO_OPENPOSE_OUTPUT --wi=FRAMES_WIDTH --he=FRAMES_HEIGHT```
 
   **1. b.  Visualization**
 
