@@ -27,7 +27,7 @@ OpenCV:
    --wi    video frames width for pose data normalization
    --he    video frames height for pose data normalization
 
-  - Example of command-line script to run the OpenPose action recognition:
+  - Example of command-line script to run the OpenPose action recognition:    
     Python PATH_TO_APP_ROOT/run_DDGCN_Open.py --rec --pose=PATH_TO_OPENPOSE_OUTPUT --wi=FRAMES_WIDTH --he=FRAMES_HEIGHT
 
   **1. b.  Visualization**
@@ -37,14 +37,14 @@ OpenCV:
    --pose   path to the OpenPose output directory. OpenPose output files are stored as JSON format for each frame
    --video  path to the video directory
 
-  - Example of command-line script to run the OpenPose skeleton visualization:
+  - Example of command-line script to run the OpenPose skeleton visualization:    
     ```Python PATH_TO_APP_ROOT/run_DDGCN_Open.py --vis --pose=PATH_TO_OPENPOSE_OUTPUT --video=PATH_TO_VIDEO```
 
 **2. NTU:**
  - The user enters the following arguments for NTU action recognition:
    --pose  path to the NTU skeleton sequence following its standards
 
- - Example of command-line script to run the NTU action recognition:
+ - Example of command-line script to run the NTU action recognition:    
    ```Python PATH_TO_APP_ROOT/run_DDGCN_NTU.py --pose=PATH_TO_SKELETON_DATA```
   
 **Some example scripts:**
