@@ -1,0 +1,37 @@
+argparse_cfg:
+  gpus:
+    bind_to: processor_cfg.gpus
+    help: number of gpus
+  batch_size:
+    bind_to: processor_cfg.batch_size
+  checkpoint:
+    bind_to: processor_cfg.checkpoint
+    help: the checkpoint file to load from
+    default: DDGCN://ddgcn/kinetics-skeleton
+
+processor_cfg:
+  name: ".recognition.test"
+  checkpoint:
+
+  # model setting
+  model_cfg:
+    name: ".DDGCN"
+    in_channels: 3
+    num_class: 400
+    edge_importance_weighting: True
+    graph_cfg:
+      layout: "openpose"
+      strategy: "dynamic"
+
+  # dataset setting
+  dataset_cfg:
+    name: ".data_import.SkeletonReader"
+    data_path: 
+    # debug: true
+
+  # dataloader setting
+  batch_size: 4
+  gpus: 1
+
+
+
